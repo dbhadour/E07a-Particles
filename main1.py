@@ -14,17 +14,17 @@ SCREEN_HEIGHT = 600
 MARGIN = 30
 SCREEN_TITLE = "Particle Exercise"
 
-PARTICLE_MIN_SCALE = 0.01
-PARTICLE_MAX_SCALE = 0.08
+PARTICLE_MIN_SCALE = 0.15
+PARTICLE_MAX_SCALE = 0.2
 PARTICLE_MIN_X = -20
 PARTICLE_MAX_X = 20
 PARTICLE_VELOCITY_X = 0
-PARTICLE_VELOCITY_Y = 4
+PARTICLE_VELOCITY_Y = 2
 PARTICLE_MIN_AX = -0.1
 PARTICLE_MAX_AX = 0.1
 PARTICLE_MIN_AY = -0.1
 PARTICLE_MAX_AY = 0.1
-PARTICLE_MIN_DECAY = 0.001
+PARTICLE_MIN_DECAY = 0.01
 PARTICLE_MAX_DECAY = 0.01
 
 
@@ -110,7 +110,7 @@ class Window(arcade.Window):
             decay = random.uniform(PARTICLE_MIN_DECAY,PARTICLE_MAX_DECAY)
             scale = random.uniform(PARTICLE_MIN_SCALE,PARTICLE_MAX_SCALE)
             #Particle(asset, sprite scale, initial position [x], initial position [y], velocity [x], velocity [y], acceleration [x], acceleration [y], scale decay)
-            particle = Particle('circle_05',scale,x,y,dx,dy,ax,ay,decay)
+            particle = Particle('star_05',scale,x,y,dx,dy,ax,ay,decay)
 
             self.particle_list.append(particle)
 
